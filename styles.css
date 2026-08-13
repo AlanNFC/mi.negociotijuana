@@ -1,0 +1,166 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #111;
+  color: #fff;
+}
+
+.page {
+  width: min(100%, 560px);
+  min-height: 100vh;
+  margin: auto;
+  padding: 24px 18px 36px;
+  background: #1c1c1c;
+}
+
+.hero { text-align: center; padding: 12px 0 22px; }
+
+.logo {
+  width: 92px;
+  height: 92px;
+  margin: 0 auto 14px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #f4f4f4;
+  color: #111;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+h1 { margin: 0; font-size: 30px; }
+.tagline { margin: 7px 0 14px; opacity: .75; }
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.socials a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  opacity: .85;
+}
+
+.promo {
+  position: relative;
+  padding: 16px 42px 16px 16px;
+  margin-bottom: 16px;
+  border-radius: 16px;
+  background: #fff;
+  color: #111;
+}
+
+.promo strong, .promo span { display: block; }
+.promo span { margin-top: 5px; font-size: 14px; }
+
+.close-promo {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  border: 0;
+  background: transparent;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.actions { display: grid; gap: 12px; }
+
+.actions button, .actions a {
+  width: 100%;
+  border: 0;
+  border-radius: 14px;
+  padding: 17px 16px;
+  background: #fff;
+  color: #111;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 650;
+  text-align: center;
+  cursor: pointer;
+}
+
+.info {
+  display: grid;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.info > div, .content-section {
+  padding: 18px;
+  border-radius: 16px;
+  background: #292929;
+}
+
+h2 { margin: 0 0 9px; font-size: 20px; }
+p { line-height: 1.5; }
+
+.content-section { margin-top: 16px; }
+
+.menu-card, .location {
+  display: grid;
+  gap: 7px;
+  padding: 14px 0;
+  border-top: 1px solid #444;
+}
+
+.menu-card:first-of-type, .location:first-of-type { border-top: 0; }
+
+.location a {
+  color: #fff;
+  font-weight: 650;
+}
+
+label {
+  display: block;
+  margin: 14px 0 7px;
+  font-weight: 650;
+}
+
+.stars { display: flex; gap: 5px; }
+.stars button {
+  border: 0;
+  background: transparent;
+  color: #aaa;
+  font-size: 34px;
+  cursor: pointer;
+}
+.stars button.active { color: #fff; }
+
+select, textarea {
+  width: 100%;
+  padding: 13px;
+  border-radius: 10px;
+  border: 1px solid #555;
+  background: #111;
+  color: #fff;
+  font: inherit;
+}
+
+.primary {
+  width: 100%;
+  margin-top: 16px;
+  padding: 14px;
+  border: 0;
+  border-radius: 11px;
+  background: #fff;
+  color: #111;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.small { font-size: 13px; opacity: .75; }
+.success { margin-top: 14px; padding: 12px; border-radius: 10px; background: #333; }
+.hidden { display: none; }
+
+footer {
+  text-align: center;
+  margin-top: 28px;
+  font-size: 12px;
+  opacity: .5;
+}
