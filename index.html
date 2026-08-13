@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Demo de menú digital para restaurante con NFC">
+  <title>MI NEGOCIO TIJUANA</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div class="logo">RD</div>
+      <h1>MI NEGOCIO TIJUANA</h1>
+      <p class="tagline">Sabor que quieres volver a probar</p>
+      <div class="socials">
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="Facebook">Facebook</a>
+        <a href="#" aria-label="TikTok">TikTok</a>
+      </div>
+    </section>
+
+    <section class="promo" id="promo">
+      <button class="close-promo" onclick="closePromo()" aria-label="Cerrar">×</button>
+      <strong>Promoción de temporada</strong>
+      <span>Conoce nuestro platillo especial de la semana SANTAAAA.</span>
+    </section>
+
+    <section class="actions">
+      <button onclick="showSection('menu')">🍽️ Ver menú</button>
+      <button onclick="showSection('locations')">📍 Sucursales</button>
+      <a href="tel:+526641234567">📞 Llamar para pedir</a>
+      <a href="https://wa.me/526641234567" target="_blank" rel="noopener">💬 Pedir por WhatsApp</a>
+      <button onclick="showSection('experience')">⭐ Valora tu experiencia</button>
+    </section>
+
+    <section class="info">
+      <div>
+        <h2>Horario</h2>
+        <p>Lunes a domingo<br>12:00 PM – 10:00 PM</p>
+      </div>
+      <div>
+        <h2>Sobre nosotros</h2>
+        <p>Una página demo diseñada para mostrar cómo podría funcionar tu sistema NFC para restaurantes.</p>
+      </div>
+    </section>
+
+    <section id="menu" class="content-section hidden">
+      <h2>Menú</h2>
+      <div class="menu-card"><b>Entradas</b><span>Ceviche de la casa — $180</span><span>Aguachile — $220</span></div>
+      <div class="menu-card"><b>Platos fuertes</b><span>Pescado fresco — $280</span><span>Camarones especiales — $320</span></div>
+      <div class="menu-card"><b>Especiales</b><span>Platillo de temporada — $350</span></div>
+    </section>
+
+    <section id="locations" class="content-section hidden">
+      <h2>Sucursales</h2>
+      <div class="location">
+        <b>Zona Río</b>
+        <span>Av. Principal 123, Tijuana, B.C.</span>
+        <a href="https://maps.google.com/?q=Tijuana" target="_blank" rel="noopener">Ver ubicación</a>
+      </div>
+      <div class="location">
+        <b>Zona Centro</b>
+        <span>Av. Revolución 456, Tijuana, B.C.</span>
+        <a href="https://maps.google.com/?q=Tijuana" target="_blank" rel="noopener">Ver ubicación</a>
+      </div>
+    </section>
+
+    <section id="experience" class="content-section hidden">
+      <h2>Valora tu experiencia</h2>
+      <p class="small">Esta encuesta es una demostración. En la versión real puede registrar sucursal, mesa y mesero.</p>
+      <label>¿Cómo fue tu experiencia?</label>
+      <div class="stars" id="stars">
+        <button onclick="rate(1)">★</button>
+        <button onclick="rate(2)">★</button>
+        <button onclick="rate(3)">★</button>
+        <button onclick="rate(4)">★</button>
+        <button onclick="rate(5)">★</button>
+      </div>
+      <label for="waiter">Mesero que te atendió</label>
+      <select id="waiter">
+        <option>Selecciona un mesero</option>
+        <option>Mesero 1</option>
+        <option>Mesero 2</option>
+        <option>Mesero 3</option>
+      </select>
+      <label for="comment">Comentario</label>
+      <textarea id="comment" rows="4" placeholder="Cuéntanos cómo fue tu experiencia"></textarea>
+      <button class="primary" onclick="submitExperience()">Enviar evaluación</button>
+      <div id="thankyou" class="success hidden">¡Gracias por tu opinión!</div>
+    </section>
+
+    <footer>
+      <p>Demo de plataforma NFC para restaurantes</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
